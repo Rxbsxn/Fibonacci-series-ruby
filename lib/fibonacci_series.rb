@@ -4,6 +4,18 @@ class FibonacciSeries < Struct.new(:number)
   end
 
   def result
-    @number
+    if @number == 0 || @number == 1
+      @number
+    else
+      fibonacci(@number)
+    end
+  end
+
+  def fibonacci(number)
+    if number == 0 || number == 1
+      number
+    else
+      fibonacci(number - 1) + fibonacci(number - 2)
+    end
   end
 end

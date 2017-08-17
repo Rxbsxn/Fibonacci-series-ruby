@@ -22,7 +22,7 @@ RSpec.describe FibonacciSeries do
     context 'when input is 12' do
       number = 12
 
-      it { expect(FibonacciSeries.new(number).result).to eq 144 }
+      it { expect(FibonacciSeries.new(number).result).to eq 144}
     end
   end
 end
