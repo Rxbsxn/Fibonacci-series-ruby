@@ -7,3 +7,10 @@ class FibonacciSeries < Struct.new(:number)
     end
   end
 end
+
+
+unless ENV['RACK_ENV'] == 'rspec'
+  File.open(ARGV[0]).each_line do |line|
+    puts FibonacciSeries.fibonacci(line.to_i)
+  end
+end
